@@ -1,7 +1,19 @@
-<!--
-    // TODO
--->
+<?php
 
+/*
+TODO file header
+*/
+
+// creating cupcakes assoc array
+$cupcakes["grasshopper"] = "The Grasshopper";
+$cupcakes["maple"] = "Whiskey Maple Bacon";
+$cupcakes["carrot"] = "Carrot Walnut";
+$cupcakes["caramel"] = "Salted Caramel Cupcake";
+$cupcakes["velvet"] = "Red Velvet";
+$cupcakes["lemon"] = "Lemon Drop";
+$cupcakes["tiramisu"] = "Tiramisu";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,21 +26,11 @@
 
 <body>
     <form action="cupcakes.php" method="POST">
-        <select name="" id="">
-            <?php
-
-            $cupcakes["grasshopper"] = "The Grasshopper";
-            $cupcakes["maple"] = "Whiskey Maple Bacon";
-            $cupcakes["carrot"] = "Carrot Walnut";
-            $cupcakes["caramel"] = "Salted Caramel Cupcake";
-            $cupcakes["velvet"] = "Red Velvet";
-            $cupcakes["lemon"] = "Lemon Drop";
-            $cupcakes["tiramisu"] = "Tiramisu";
-
-            foreach ($cupcakes as $key => $value) { ?>
+        <select name="cupcakes" id="cupcakes">
+            <!-- creates option for each cupcake -->
+            <?php foreach ($cupcakes as $key => $value) { ?>
                 <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
             <?php } ?>
-
         </select>
     </form>
 </body>
